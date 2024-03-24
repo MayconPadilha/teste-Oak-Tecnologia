@@ -1,0 +1,10 @@
+
+nav{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+nav img{
+    width: 350px;
+}

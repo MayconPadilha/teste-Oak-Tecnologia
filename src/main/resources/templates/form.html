@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Produto</title>
+</head>
+<body>
+    <h1>Formulário de Produto</h1>
+    <form action="/form" method="post">
+        <label for="nameProduct">Nome do Produto:</label><br>
+        <input type="text" id="nameProduct" name="nameProduct" required>
+        <br>
+        <label for="descriptionProduct">Descrição do Produto:</label>
+        <textarea id="descriptionProduct" name="descriptionProduct"></textarea>
+        <br>
+        <label for="valueProduct">Valor do Produto:</label>
+        <input type="text" id="valueProduct" name="valueProduct" required>
+        <br>
+        <label for="availableForSale">Disponível para Venda:</label>
+        <input type="checkbox" id="availableForSale" name="availableForSale" required>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

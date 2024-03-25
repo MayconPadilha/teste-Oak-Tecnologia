@@ -8,10 +8,10 @@ public class Product {
     private String nameProduct;
     private String descriptionProduct;
     private double valueProduct;
-    private boolean availableForSale;
+    private String availableForSale;
 
 
-    public Product(String nameProduct, String descriptionProduct, double valueProduct, boolean availableForSale) {
+    public Product(String nameProduct, String descriptionProduct, double valueProduct, String availableForSale) {
         // this.id = id;
         this.nameProduct = nameProduct;
         this.descriptionProduct = descriptionProduct;

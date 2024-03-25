@@ -4,23 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Produto</title>
+    <link rel="shortcut icon" href="https://www.oaktecnologia.com/wp-content/uploads/2021/12/oak-icon.png">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="styleform.css"> 
 </head>
 <body>
-    <h1>Formulário de Produto</h1>
-    <form action="/form" method="post">
-        <label for="nameProduct">Nome do Produto:</label><br>
-        <input type="text" id="nameProduct" name="nameProduct" required>
-        <br>
-        <label for="descriptionProduct">Descrição do Produto:</label>
-        <textarea id="descriptionProduct" name="descriptionProduct"></textarea>
-        <br>
-        <label for="valueProduct">Valor do Produto:</label>
-        <input type="text" id="valueProduct" name="valueProduct" required>
-        <br>
-        <label for="availableForSale">Disponível para Venda:</label>
-        <input type="checkbox" id="availableForSale" name="availableForSale" required>
-        <br>
-        <input type="submit" value="Enviar">
-    </form>
+    <nav>
+        <img src="https://www.oaktecnologia.com/wp-content/uploads/2022/02/cropped-cropped-WhatsApp-Image-2022-02-17-at-12.01.21.jpeg" alt="imagem logo aok">
+        <div class="menu">
+            <a href="./list_products">Listagem</a>
+            <a href="./form">Formulário</a>
+            <a href="https://www.linkedin.com/in/maycon-padilha/" target="_blank">Contato</a>
+        </div>
+    </nav>
+
+    <main>
+        <h3>Formulário de Produto</h3>
+        <form action="/form" method="post">
+            <label for="nameProduct">Nome do Produto</label><br>
+            <input type="text" id="nameProduct" name="nameProduct" required>
+            <br>
+            <label for="descriptionProduct">Descrição do Produto</label>
+            <textarea id="descriptionProduct" name="descriptionProduct"></textarea>
+            <br>
+            <label for="valueProduct">Valor do Produto</label>
+            <input type="text" id="valueProduct" name="valueProduct" required>
+            <br>
+            <label for="availableForSale">Disponível para Venda</label>
+            <!-- <input type="checkbox" id="availableForSale" name="availableForSale" required> -->
+            <select id="disponibilidade" name="disponibilidade">
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+            <input class="btnEnviar" type="submit" value="Enviar">
+        </form>
+    </main>    
 </body>
 </html>

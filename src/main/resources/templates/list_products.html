@@ -4,39 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listagem</title>
-
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="shortcut icon" href="https://www.oaktecnologia.com/wp-content/uploads/2021/12/oak-icon.png">
+    <link rel="stylesheet" href="style.css">  
+    
+    <script async src="https://kit.fontawesome.com/4eb0e9cbb9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
     <nav>
         <img src="https://www.oaktecnologia.com/wp-content/uploads/2022/02/cropped-cropped-WhatsApp-Image-2022-02-17-at-12.01.21.jpeg" alt="imagem logo aok">
-        <a href="./form">formulario</a>
-        <a href="#">Contato</a>
-    </nav>    
-
-    <h3>Listagem dos produtos cadastrados</h3>
+        <div class="menu">
+            <a href="./list_products">Listagem</a>
+            <a href="./form">Formulário</a>
+            <a href="https://www.linkedin.com/in/maycon-padilha/" target="_blank">Contato</a>
+        </div>
+    </nav> 
+    
+    <main>
+        <div>
+            <h3>Listagem dos produtos cadastrados</h3>
+            <a href="./form">Novo Produto</a>
+        </div>
   
-    <table class="table">
-        <thead>
-        <tr>
-            <th scope="col">Nome</th>
-            <th scope="col">Valor</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="products : ${products}">
-            <td th:text="${products.nameProduct}"></td>
-            <td th:text="${products.valueProduct}"></td>
-            <td>
-                <a th:href="@{'/edit/'+${products.id}}" >Editar</a>
-              </td>
-              <td>
-                <a th:href="@{'/delet/'+${products.id}}" onclick="return confirm('Tem certeza que deseja excluir o produto?')">Excluir</a>
-              </td>
-        </tr>
-        </tbody>
-    </table>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Produto</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Excluir</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="products : ${products}">
+                <td th:text="${products.nameProduct}"></td>
+                <td th:text="'R$ '+${products.valueProduct}"></td>
+                <td>
+                    <i class="fa-solid fa-pencil"></i>
+                </td>
+                <td>
+                    <i class="fa-solid fa-xmark"></i>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </main>  
     
 </body>
 </html>

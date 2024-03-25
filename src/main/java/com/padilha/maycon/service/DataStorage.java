@@ -12,9 +12,9 @@ public class DataStorage {
     private List<Product> data = new ArrayList<>();
 
     public DataStorage() {
-        data.add(new Product("Arroz", "Descrição do Arroz", 2.50, true));
-        data.add(new Product("Feijão", "Descrição do Feijão", 3, false));
-        data.add(new Product("Macarrão", "Descrição do Macarrão", 1.80, true));
+        data.add(new Product("Arroz", "Descrição do Arroz", 2.55, "sim"));
+        data.add(new Product("Feijão", "Descrição do Feijão", 3, "não"));
+        data.add(new Product("Macarrão", "Descrição do Macarrão", 1.80, "sim"));
     }
 
     public void salvarObjeto(Product objeto) {
